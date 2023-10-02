@@ -1,111 +1,153 @@
-// This is the place to place Bootstrap's variables overrides.
-// As example you can start by importing the _variables.scss file from one of the
-// theme provided by https://bootswatch.com .
+/* ==========================================================================
+   Variables
+   ========================================================================== */
+
+/*
+   Typography
+   ========================================================================== */
+
+$doc-font-size              : 16;
+
+/* paragraph indention */
+$paragraph-indent           : false; // true, false (default)
+$indent-var                 : 1.3em;
+
+/* system typefaces */
+$serif                      : Georgia, Times, serif;
+$sans-serif                 : -apple-system, ".SFNSText-Regular", "San Francisco", "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", Arial, sans-serif;
+$monospace                  : Monaco, Consolas, "Lucida Console", monospace;
+
+/* sans serif typefaces */
+$sans-serif-narrow          : $sans-serif;
+$helvetica                  : Helvetica, "Helvetica Neue", Arial, sans-serif;
+
+/* serif typefaces */
+$georgia                    : Georgia, serif;
+$times                      : Times, serif;
+$bodoni                     : "Bodoni MT", serif;
+$calisto                    : "Calisto MT", serif;
+$garamond                   : Garamond, serif;
+
+$global-font-family         : $sans-serif;
+$header-font-family         : $sans-serif;
+$caption-font-family        : $serif;
+
+/* type scale */
+$type-size-1                : 2.441em;  // ~39.056px
+$type-size-2                : 1.953em;  // ~31.248px
+$type-size-3                : 1.563em;  // ~25.008px
+$type-size-4                : 1.25em;   // ~20px
+$type-size-5                : 1em;      // ~16px
+$type-size-6                : 0.75em;   // ~12px
+$type-size-7                : 0.6875em; // ~11px
+$type-size-8                : 0.625em;  // ~10px
 
 
-// Some customization of the container class to have a better display in the guide.
-// Don't hesitate to remove it to have a standard Bootstrap behavior
-$container-max-widths: (
-  sm: 540px,
-  md: 640px,
-  lg: 690px,
-  xl: 720px
-) !default;
+/*
+   Colors
+   ========================================================================== */
 
-// Minty 4.3.1
-// Bootswatch
+$gray                       : #7a8288;
+$dark-gray                  : mix(#000, $gray, 40%);
+$darker-gray                : mix(#000, $gray, 60%);
+$light-gray                 : mix(#fff, $gray, 50%);
+$lighter-gray               : mix(#fff, $gray, 90%);
 
-//
-// Color system
-//
+$body-color                 : #fff;
+$background-color           : #fff;
+$code-background-color      : #fafafa;
+$code-background-color-dark : $light-gray;
+$text-color                 : $dark-gray;
+$border-color               : $lighter-gray;
 
-$white:    #fff !default;
-$gray-100: #f8f9fa !default;
-$gray-200: #f7f7f9 !default;
-$gray-300: #eceeef !default;
-$gray-400: #ced4da !default;
-$gray-500: #aaa !default;
-$gray-600: #888 !default;
-$gray-700: #5a5a5a !default;
-$gray-800: #343a40 !default;
-$gray-900: #212529 !default;
-$black:    #000 !default;
+$primary-color              : #7a8288;
+$success-color              : #62c462;
+$warning-color              : #f89406;
+$danger-color               : #ee5f5b;
+$info-color                 : #52adc8;
 
-$blue:    #007bff !default;
-$indigo:  #6610f2 !default;
-$purple:  #6f42c1 !default;
-$pink:    #e83e8c !default;
-$red:     #FF7851 !default;
-$orange:  #fd7e14 !default;
-$yellow:  #FFCE67 !default;
-$green:   #56CC9D !default;
-$teal:    #20c997 !default;
-$cyan:    #6CC3D5 !default;
+/* brands */
+$behance-color              : #1769FF;
+$dribbble-color             : #ea4c89;
+$facebook-color             : #3b5998;
+$flickr-color               : #ff0084;
+$foursquare-color           : #0072b1;
+$github-color               : #171516;
+$google-plus-color          : #dd4b39;
+$instagram-color            : #517fa4;
+$lastfm-color               : #d51007;
+$linkedin-color             : #007bb6;
+$pinterest-color            : #cb2027;
+$rss-color                  : #fa9b39;
+$soundcloud-color           : #ff3300;
+$stackoverflow-color        : #fe7a15;
+$tumblr-color               : #32506d;
+$twitter-color              : #55acee;
+$vimeo-color                : #1ab7ea;
+$vine-color                 : #00bf8f;
+$youtube-color              : #bb0000;
+$xing-color                 : #006567;
 
-$primary:       #216354 !default;
-$secondary:     #F3969A !default;
-$success:       $green !default;
-$info:          $cyan !default;
-$warning:       $yellow !default;
-$danger:        $red !default;
-$light:         $gray-100 !default;
-$dark:          $gray-800 !default;
 
-$yiq-contrasted-threshold: 250 !default;
+/* links */
+$link-color                 : $info-color;
+$link-color-hover           : mix(#000, $link-color, 25%);
+$link-color-visited         : mix(#fff, $link-color, 25%);
+$masthead-link-color        : $primary-color;
+$masthead-link-color-hover  : mix(#000, $primary-color, 25%);
 
-// Body
 
-$body-color:                $gray-600 !default;
+/*
+   Breakpoints
+   ========================================================================== */
 
-// Components
+@include breakpoint-set("to ems", true);
+/*
+$small                      : 400px;
+$medium                     : 500px;
+$medium-wide                : 550px;
+$large                      : 1200px;
+$x-large                    : 1800px;
+*/
 
-$border-radius:               .4rem !default;
-$border-radius-lg:            .6rem !default;
-$border-radius-sm:            .3rem !default;
+$small                      : 600px !default;
+$medium                     : 768px !default;
+$medium-wide                : 900px !default;
+$large                      : 925px !default;
+$x-large                    : 1280px !default;
 
-// Fonts
+/*
+   Grid
+   ========================================================================== */
 
-$headings-font-family:        "Montserrat", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !default;
-$headings-color:              $gray-700 !default;
+$right-sidebar-width-narrow : 0px;
+$right-sidebar-width        : 0px;
+$right-sidebar-width-wide   : 0px;
 
-// Tables
+$susy: (
+  columns: 12,
+  column-width: 120px,
+  gutters: 1/4,
+  math: fluid,
+  output: float,
+  gutter-position: after,
+  container: $large,
+  global-box-sizing: border-box,
+  // debug: (
+  //   image: show,
+  //   color: blue,
+  //   output: overlay,
+  //   toggle: top right,
+  // ),
+);
 
-$table-border-color:          rgba(0,0,0,0.05) !default;
 
-// Dropdowns
+/*
+   Other
+   ========================================================================== */
 
-$dropdown-link-hover-color:         $white !default;
-$dropdown-link-hover-bg:            $secondary !default;
-
-// Navbar
-
-$navbar-dark-color:                 rgba($white,.6) !default;
-$navbar-dark-hover-color:           $white !default;
-
-$navbar-light-color:                rgba($black,.3) !default;
-$navbar-light-hover-color:          $gray-700 !default;
-$navbar-light-active-color:         $gray-700 !default;
-$navbar-light-disabled-color:       rgba($black,.1) !default;
-
-// Pagination
-
-$pagination-color:                  $white !default;
-$pagination-bg:                     $primary !default;
-$pagination-border-color:           $primary !default;
-
-$pagination-hover-color:            $white !default;
-$pagination-hover-bg:               $secondary !default;
-$pagination-hover-border-color:     $pagination-hover-bg !default;
-
-$pagination-active-bg:              $secondary !default;
-$pagination-active-border-color:    $pagination-active-bg !default;
-
-$pagination-disabled-color:         $white !default;
-$pagination-disabled-bg:            #CCE8E0 !default;
-$pagination-disabled-border-color:  $pagination-disabled-bg !default;
-
-// Breadcrumbs
-
-$breadcrumb-bg:                     $primary !default;
-$breadcrumb-divider-color:          $white !default;
-$breadcrumb-active-color:           $breadcrumb-divider-color !default;
+$border-radius              : 4px;
+$box-shadow                 : 0 1px 1px rgba(0, 0, 0, 0.125);
+$navicon-width              : 28px;
+$navicon-height             : 4px;
+$global-transition          : all 0.2s ease-in-out;
